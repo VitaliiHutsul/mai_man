@@ -1,0 +1,7 @@
+production:
+  base_url: https://gate.smsclub.mobi/token
+  user_name: 380975258652
+  token: QeuOU7eTi4XBCGt
+  from: Manhattan
+  lifetime: 5
+
