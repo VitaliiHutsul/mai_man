@@ -44,7 +44,7 @@ namespace :bower do
     end
   end
 end
-
+before 'deploy:assets:precompile', 'bower:install'
 
 namespace :task do
   desc 'Install translations'
