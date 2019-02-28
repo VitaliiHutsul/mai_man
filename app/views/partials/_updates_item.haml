@@ -1,0 +1,6 @@
+%li.updates-item>
+  .updates-item__container
+    %h6= updates_item.title
+    - if updates_item.text.present?
+      %p= updates_item.text 
+    %p.date= updates_item.date.strftime('%d.%m.%Y')

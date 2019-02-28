@@ -1,0 +1,9 @@
+%li.news-item>
+  =link_to news_path(news_item) do
+    .news-item__preview>
+      - if news_item.preview_image.present?
+        = image_tag  news_item.preview_image, alt: news_item.title
+    .news-item__text>
+      %h6= news_item.title
+      %p= news_item.preview_text
+      %p.date= news_item.date.strftime('%d.%m.%Y')

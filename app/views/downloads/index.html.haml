@@ -1,0 +1,37 @@
+- content_for :body_class, "downloads-page"
+- content_for :title, t('title.downloads')
+
+= render partial: 'partials/static-menu'
+.section.two-col-bg.downloads-section
+  .bg-container
+    .slide-image.first{style: "background-image: url(#{image_path "status-section-bg-first.png"});"}
+    .slide-image.second{style: "background-image: url(#{image_path "status-section-bg-second.png"});"}
+
+  - if @download.present?
+    .section-content
+      .flex-block.half-width.first.padding-left
+        .text-block
+          - if @download.downloads_photos.present?
+            .swiper-container.js-downloads-slider.downloads-slider
+              .swiper-wrapper
+                - @download.downloads_photos.each do |photo|
+                  .swiper-slide
+                    = image_tag photo.image.url, alt: '#'
+              .main-swiper-pagination.swiper-pagination
+
+      .flex-block.half-width.second.padding-left
+        .text-block
+          %h4= raw @download.title
+          %p= @download.text
+
+          .downloads-page__countdown
+            %p= t('.time_left')
+            .countdown.js-countdown{data:{start: "#{@download.start_date.strftime("%Y/%m/%d")}"}}
+
+          .downloads-page__buttons
+            -  if @download.show_ios_button
+              %a.download.button-ios{href: "#{@download.ios_link}", target: "_blank"}>
+            -  if @download.show_android_button
+              %a.download.button-android{href: "#{@download.android_link}", target: "_blank"}>
+
+= render partial: 'partials/footer'

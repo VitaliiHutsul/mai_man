@@ -1,0 +1,134 @@
+.swiper-container.main-slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main-slider {
+  .swiper-slide {
+    text-align: center;
+    background: #191e23;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    .half-width {
+      position: relative;
+      height: 100%;
+    }
+    .slide-image {
+      &.slide-top {
+        top: -100%;
+        opacity: 0;
+        transition: top 1.5s, opacity 1.5s;
+      }
+    }
+    &.swiper-slide-active {
+      .slide-image {
+          &.slide-top {
+            top: 0;
+            opacity: 1;
+          }
+        }
+    }
+  }
+}
+
+.main-slider,
+.downloads-slider {
+  .swiper-pagination-bullet {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    background: none;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      border-radius: 100%;
+      transform: translate(-50%, -50%);
+    }
+    circle { opacity: 0; }
+  }
+
+  .swiper-pagination-bullet-active {
+    background: none;
+    svg { transform: rotate(-90deg); }
+    circle {
+      opacity: 1;
+      stroke-dasharray: 160;
+      stroke-dashoffset: 160;
+      animation: draw_svg 9s linear forwards;
+
+    }
+  }
+}
+
+.downloads-slider {
+  padding-bottom: 100px;
+  &.swiper-container-horizontal {
+    > .swiper-pagination-bullets {
+      bottom: 0;
+    }
+  }
+}
+
+.main-slider.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 20px;
+  height: 40px;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+@keyframes draw_svg {
+  from { stroke-dashoffset: 160; }
+  to { stroke-dashoffset: 0; }
+}
+
+@media only screen and (max-width: 959px) {
+  .main-section {
+    .container {
+      position: absolute;
+      top: 0;
+    }
+  }
+  .main-slider {
+    .swiper-slide  {
+      .half-width {
+        padding-top: 550px;
+        height: 0;
+      }
+      .slide-image {
+        &.slide-top {
+          top: 0;
+          opacity: 1;
+          transition: none;
+        }
+      }
+    }
+  }
+  .swiper-container.main-slider {
+    position: static;
+    width: 100%;
+  }
+}

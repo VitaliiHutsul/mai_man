@@ -1,0 +1,156 @@
+.downloads-page {
+  min-height: 100%;
+  .logo.hidden {
+    opacity: 1;
+    top: 0;
+  }
+  .section {
+    height: 100%;
+    min-height: 100vh;
+    .half-width.first {
+      text-align: center;
+      @media screen and (max-width: 640px) {
+        width: 100%;
+      }
+      .text-block {
+        padding: 90px 0;
+        margin: 0 auto;
+        background: image-url("downlods-slider-bg.png") no-repeat left top 40px;
+        @media screen and (max-width: 1024px) {
+          background: none;
+        }
+        @media screen and (max-width: 640px) {
+          padding-bottom: 40px;
+        }
+      }
+    }
+    .half-width.second {
+      align-items: center;
+      @media screen and (max-width: 640px) {
+        width: 100%;
+      }
+      .text-block {
+        padding: 90px 0;
+        @media screen and (max-width: 640px) {
+          padding-top: 0;
+        }
+      }
+    }
+    .flex-block { transform: translateY(0); }
+  }
+  .text-block {
+    p { margin-top: 0; }
+  }
+  h4 {
+    position: relative;
+    margin-bottom: 40px;
+    text-transform: none;
+    span { text-transform: uppercase; }
+    &::before {
+      content: "";
+      width: 29px;
+      height: 50px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -70px;
+      background: image-url('phone-ico.png') no-repeat;
+      background-size: cover;
+      @media screen and (max-width: 1200px) {
+        left: -50px;
+      }
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 640px) {
+      margin-bottom: 20px;
+    }
+  }
+  .downloads-slider {
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 320px;
+      @media screen and (max-width: 840px) {
+        max-width: 240px;
+      }
+      @media screen and (max-width: 480px) {
+        max-width: 150px;
+      }
+    }
+  }
+}
+
+.downloads-page__countdown {
+  margin-top: 55px;
+  * { color: #14fffb; }
+  .countdown {
+    margin-top: 10px;
+    font-size: 30px;
+    line-height: 34px;
+  }
+  @media screen and (max-width: 1024px) {
+    margin-top: 30px;
+  }
+  @media screen and (max-width: 640px) {
+    text-align: center;
+  }
+}
+
+.downloads-page__buttons {
+  margin-top: 70px;
+  @media screen and (max-width: 1200px) {
+    margin-top: 0;
+    padding-top: 25px;
+  }
+  .download {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 35px;
+    position: relative;
+    width: 179px;
+    height: 55px;
+    cursor: pointer;
+    @media screen and (max-width: 1200px) {
+      margin-right: 10px;
+    }
+    @media screen and (max-width: 1024px) {
+      display: block;
+      margin-right: 0;
+      margin-top: 25px;
+    }
+    @media screen and (max-width: 640px) {
+      margin: 25px auto 0 auto !important;
+    }
+    &:last-child { margin-right: 0; }
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+    &::after {
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    &.button-ios {
+      &::before { background-image: image-url('ios-button.png'); }
+      &::after { background-image: image-url('ios-button-hover.png'); }
+    }
+    &.button-android {
+      &::before { background-image: image-url('android-button.png'); }
+      &::after { background-image: image-url('android-button-hover.png'); }
+    }
+    &:hover {
+      &::after { opacity: 1; }
+    }
+  }
+}

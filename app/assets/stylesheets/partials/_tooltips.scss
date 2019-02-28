@@ -1,0 +1,174 @@
+.advantages-section {
+  .flex-block.second {
+    .text-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .section-content {
+    position: relative;
+    div { z-index: 1; }
+    .tooltips-container {
+      padding: 90px 0 40px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .wrap { position: relative }
+      img {
+        width: 100%;
+        height: auto;
+        vertical-align: top
+      }
+      .inner {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0
+      }
+      .tooltip {
+        position: absolute;
+        display: block;
+        // width: 105px;
+        // padding-top: 105px;
+        width: 11.628%;
+        padding-top: 11.628%;
+        height: 0;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, .1);
+        cursor: pointer;
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 78%;
+          height: 78%;
+          background: rgba(255, 255, 255, .1);
+          transform: translate(-50%, -50%);
+          border-radius: 100%;
+          transition: all .3s;
+        }
+        &::after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 50%;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+        }
+        &:hover {
+          &::before {
+            width: 88%;
+            height: 88%;
+            background: rgba(11, 249, 243, .5);
+          }
+        }
+        &.lg {
+          // width: 130px;
+          // height: 130px;
+          width: 14.397%;
+          padding-top: 14.397%;
+        }
+        &.md {
+          // width: 120px;
+          // height: 120px;
+          width: 13.2895%;
+          padding-top: 13.2895%;
+        }
+        &.sm {
+          // width: 105px;
+          // height: 105px;
+          width: 11.628%;
+          padding-top: 11.628%;
+        }
+        &.building {
+          // left: 211px;
+          top: 2.41%;
+          left: 23.367%;
+          &::after { background-image: image-url('icons/1.png'); }
+        }
+
+        &.medal {
+          top: 7.3%;
+          left: 47.3%;
+          // left: 428px;
+          &::after { background-image: image-url('icons/2.png'); }
+        }
+
+        &.shield {
+          top: 0;
+          right: 14.2%;
+          &::after { background-image: image-url('icons/3.png'); }
+          // right: 130px;
+        }
+
+        &.flat {
+          top: 23.3%;
+          // top: 194px;
+          right: 0;
+          &::after { background-image: image-url('icons/4.png'); }
+        }
+
+        &.car {
+          // bottom: 192px;
+          right: 3.2%;
+          bottom: 23.3%;
+          &::after { background-image: image-url('icons/5.png'); }
+        }
+
+        &.cam {
+          // bottom: 32px;
+          // right: 198px;
+          bottom: 4%;
+          right: 22%;
+          &::after { background-image: image-url('icons/6.png'); }
+        }
+
+        &.room {
+          // left: 180px;
+          // bottom: 75px;
+          left: 20%;
+          bottom: 9%;
+          &::after { background-image: image-url('icons/7.png'); }
+        }
+      }
+      @media screen and (max-width: 1366px) { padding: 40px 0 30px 0; }
+    }
+  }
+}
+
+.tooltipster-sidetip .tooltipster-content {
+  color: #000;
+  background: #fff;
+  font-size: 11px;
+  border-radius: 3px;
+}
+
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border,
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-arrow-border {
+	border-bottom-color: #fff;
+}
+
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow-border,
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-arrow-border {
+	border-left-color: #fff;
+}
+
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow-border,
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow-border {
+	border-right-color: #fff;
+}
+
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border,
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-top .tooltipster-arrow-border {
+	border-top-color: #fff;
+}

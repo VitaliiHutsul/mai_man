@@ -1,0 +1,35 @@
+//=require "normalize.css/normalize"
+//=require "fullpage.js/jquery.fullPage"
+//=require "swiper/dist/css/swiper.min"
+//=require "fancybox/src/css/core"
+//=require "fancybox/src/css/fullscreen"
+//=require "fancybox/src/css/slideshow"
+//=require "fancybox/src/css/thumbs"
+//=require "tooltipster/dist/css/tooltipster.bundle.min"
+//=require "tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min"
+
+
+//import base rules
+@import "partials/base";
+
+//import header rules
+@import "partials/header";
+
+//import footer rules
+@import "partials/footer";
+
+@import "partials/swiper";
+
+@import "partials/index";
+
+@import "partials/tooltips";
+
+@import "partials/news";
+
+@import "partials/updates";
+
+@import "partials/responsive-media";
+
+@import "partials/downloads";
+
+@import "partials/call-me-now-modifier";

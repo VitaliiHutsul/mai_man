@@ -1,0 +1,14 @@
+- content_for :body_class, "news-archive-page"
+- content_for :title, t('title.news_archive')
+- content_for :desc, t('title.news_archive')
+- content_for :keywords, t('title.news_archive')
+- breadcrumb :news, @news
+
+= render partial: 'partials/header'
+
+.news-page__container
+  .container
+    %ul.news-list
+      = render partial: 'partials/news_item', collection: @news
+
+= render 'partials/footer'

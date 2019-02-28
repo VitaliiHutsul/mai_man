@@ -1,0 +1,179 @@
+- content_for :body_class, "tour-page"
+- content_for :title, t('title.main')
+- content_for :desc, t('desc.main')
+- content_for :keywords, t('keywords.main')
+
+%a.logo{href: root_path}
+#vrview.vrview
+
+
+%script{src: "//storage.googleapis.com/vrview/2.0/build/vrview.min.js"}
+
+:javascript
+  var vrView;
+
+  // All the scenes for the experience
+  var scenes = {
+    scene_1: {
+      image: '#{image_url "pano1.jpg"}',
+      // image: 'http://207.154.253.242/assets/pano1-7fa7b2c8b644454d3d63a8f1a04a1f37d5ccc07413a0224c3a7925c11604f2b2.jpg',
+      hotspots: {
+        scene_2: {
+          pitch: 0,
+          yaw: 230,
+          radius: 0.05,
+          distance: 1
+        },
+        scene_3: {
+          pitch: 5,
+          yaw: 295,
+          radius: 0.035,
+          distance: 1
+        },
+        scene_4: {
+          pitch: 6,
+          yaw: 135,
+          radius: 0.06,
+          distance: 1
+        }
+      }
+    },
+    scene_2: {
+      // image: 'http://207.154.253.242/assets/pano2-0a40bde9816c2f861e4d64422c2999410ab2aea33158addab1b8381bf1703ae9.jpg',
+      image: '#{image_url "pano2.jpg"}',
+      hotspots: {
+        scene_1: {
+          pitch: 0,
+          yaw: -8,
+          radius: 0.05,
+          distance: 1
+        },
+        scene_3: {
+          pitch: 0,
+          yaw: -90,
+          radius: 0.05,
+          distance: 1
+        },
+        scene_4: {
+          pitch: 2,
+          yaw: 20,
+          radius: 0.04,
+          distance: 1
+        }
+      }
+    },
+    scene_3: {
+      // image: 'http://207.154.253.242/assets/pano3-396c56298d20e72ecd3fb2b3c6bddc7a0fb30f793df4580877f4ebb158cda1b9.jpg',
+      image: '#{image_url "pano3.jpg"}',
+      hotspots: {
+        scene_1: {
+          pitch: -5,
+          yaw: -46,
+          radius: 0.035,
+          distance: 1
+        },
+        scene_2: {
+          pitch: -5,
+          yaw: -10,
+          radius: 0.05,
+          distance: 1
+        },
+        scene_4: {
+          pitch: -6,
+          yaw: -35,
+          radius: 0.03,
+          distance: 1
+        }
+      }
+    },
+    scene_4: {
+      // image: 'http://207.154.253.242/assets/pano4-9ced029b96a2447290f28ed28434083076766823893eaab59b830a1b2ca82d29.jpg',
+      image: '#{image_url "pano4.jpg"}',
+      hotspots: {
+        scene_1: {
+          pitch: 0,
+          yaw: 0,
+          radius: 0.05,
+          distance: 1
+        },
+        scene_5: {
+          pitch: 0,
+          yaw: -118,
+          radius: 0.06,
+          distance: 0.75
+        }
+      }
+    },
+    scene_5: {
+      // image: 'http://207.154.253.242/assets/pano5-f6be47d71ba76658cbeb053c78db00eaa4245c6779faa5bd9aac7acf77f65f6e.jpg',
+      image: '#{image_url "pano5.jpg"}',
+      hotspots: {
+        scene_4: {
+          pitch: 0,
+          yaw: -200,
+          radius: 0.02,
+          distance: 0.25
+        }
+      }
+    }
+  };
+
+  function onLoad() {
+    vrView = new VRView.Player('#vrview', {
+      image: '#{image_url "pano1.jpg"}',
+      // image: 'http://207.154.253.242/assets/pano1-7fa7b2c8b644454d3d63a8f1a04a1f37d5ccc07413a0224c3a7925c11604f2b2.jpg',
+      is_stereo: false
+    });
+
+    vrView.on('ready', onVRViewReady);
+    vrView.on('modechange', onModeChange);
+    vrView.on('click', onHotspotClick);
+    vrView.on('error', onVRViewError);
+  }
+
+  function onVRViewReady(e) {
+    console.log('onVRViewReady');
+    loadScene('scene_1');
+  }
+
+  function onModeChange(e) {
+    console.log('onModeChange', e.mode);
+  }
+
+  function onHotspotClick(e) {
+    console.log('onHotspotClick', e.id);
+    if (e.id) {
+      loadScene(e.id);
+    }
+  }
+
+  function loadScene(id) {
+    console.log('loadScene', id);
+
+    // Set the image
+    vrView.setContent({
+      image: scenes[id].image,
+      is_stereo: false
+    });
+
+    // Add all the hotspots for the scene
+    var newScene = scenes[id];
+    var sceneHotspots = Object.keys(newScene.hotspots);
+    for (var i = 0; i < sceneHotspots.length; i++) {
+      var hotspotKey = sceneHotspots[i];
+      var hotspot = newScene.hotspots[hotspotKey];
+
+      vrView.addHotspot(hotspotKey, {
+        pitch: hotspot.pitch,
+        yaw: hotspot.yaw,
+        radius: hotspot.radius,
+        distance: hotspot.distance
+      });
+    }
+  }
+
+  function onVRViewError(e) {
+    console.log('Error! %s', e.message);
+  }
+
+  window.addEventListener('load', onLoad);

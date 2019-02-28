@@ -1,0 +1,41 @@
+%a.main-logo__mobile{href: '/'}
+
+%a.burger-btn.js-burger{href: '#'}
+  %span
+  %span
+  %span
+  %span
+
+%header.main-header.js-main-header
+  .mobile-scroll
+    %span.darken-bg
+    .logo-container
+      %a.logo.hidden{title: 'Manhattan', href: '/'}
+    %nav
+      %ul.main-menu
+        %li
+          %a{href: '/#project'}= t('.project')
+        %li
+          %a{href: '/#advantages'}= t('.advantages')
+        %li
+          %a{href: '/#location'}= t('.location')
+        %li
+          %a{href: '/#planning'}= t('.planning')
+        %li
+          %a{href: '/#exclusive'}= t('.exclusive_planning')
+        %li
+          %a{href: '/#smart_home'}= t('.smart_home')
+        %li
+          %a{href: '/#infrastructure'}= t('.infrastructure')
+        %li
+          %a{href: '/#news'}= t('.news')
+        %li
+          %a{href: '/#status'}= t('.status')
+        %li
+          %a{href: '/#gallery'}= t('.gallery')
+        %li
+          %a{href: '/#video'}= t('.video')
+        %li
+          %a{href: '/#contacts'}= t('.contacts')
+
+    = lang_switcher

@@ -1,0 +1,28 @@
+- content_for :body_class, "construction-conditions-page"
+- content_for :title, t('title.videos')
+- content_for :desc, t('desc.videos')
+- content_for :keywords, t('keywords.videos')
+- breadcrumb :videos, @videos
+
+= render partial: 'partials/header'
+
+.video-section
+  .images
+    .month
+      - if @videos.present?
+        - @videos.each_slice(2) do |video_1, video_2|
+          %div.clearfix
+            - if video_1.present?
+              = link_to video_1.youtube_link, data:{fancybox: ""} do
+                .video-thumb
+                  = image_tag "https://img.youtube.com/vi/#{video_1.youtube_video_id}/0.jpg"
+                - if video_1.title.present?
+                  %h6= video_1.title
+            - if video_2.present?
+              = link_to video_2.youtube_link, data:{fancybox: ""} do
+                .video-thumb
+                  = image_tag "https://img.youtube.com/vi/#{video_2.youtube_video_id}/0.jpg"
+                - if video_2.title.present?
+                  %h6= video_2.title
+
+= render 'partials/footer'

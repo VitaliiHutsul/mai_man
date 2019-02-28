@@ -1,0 +1,17 @@
+- content_for :body_class, "gallery-page"
+- content_for :title, t('title.gallery')
+- content_for :desc, t('desc.gallery')
+- content_for :keywords, t('keywords.gallery')
+- breadcrumb :gallery_photos, @gallery_photos
+
+= render partial: 'partials/header'
+
+.gallery-section
+  .images
+    .gallery
+      - @gallery_photos.each_with_index do |gallery_photo, index|
+        = link_to gallery_photo.photo.url, data:{fancybox: 'photo-gallery'}, class: "fancybox #{gallery_item_class(index)}" do
+          = image_tag gallery_photo.photo.thumb.url, alt: '#'
+          .hover
+
+= render 'partials/footer'

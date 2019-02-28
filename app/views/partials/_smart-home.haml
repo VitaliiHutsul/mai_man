@@ -1,0 +1,267 @@
+.section-content.floor-wrapper
+
+  .flex-block.half-width.first.padding-left>
+    .text-block
+      .smart-home__heading
+        %h3= t('smart_home')
+      .smart-home-floor.floor
+        %h4= t('.houses')
+        .floor-plan__container
+          .room-img.f-1-r-1
+          .room-img.f-1-r-2
+          .room-img.f-1-r-3.first-active.hidden
+          .room-img.f-1-r-4
+          .room-img.f-1-r-5
+          .room-img.f-1-r-6
+          .room-img.f-1-r-7
+          = render 'partials/smart-home-svg'
+        .smart-home-icons
+          %ul
+            %li.tooltip{title: t('.smart_home_tooltip_1_html')}>
+              %span.first
+              %p= t('.ico_1')
+            %li.tooltip{title: t('.smart_home_tooltip_2_html')}>
+              %span.second.tooltip
+              %p= t('.ico_2')
+            %li.tooltip{title: t('.smart_home_tooltip_3_html')}>
+              %span.third.tooltip
+              %p= t('.ico_3')
+
+  .flex-block.half-width.padding-left.second>
+    .text-block
+      .arrows-container
+        %a.arrow.prev.js-prev-planning{href: '#'}>
+        %a.arrow.next.js-next-planning{href: '#'}>
+      .rooms-info
+        .room-info.f-1-r-1__slide{data:{class: 'f-1-r-1'}}
+          .info-container
+            .smart-home__heading
+              %h3
+                2
+                = t('rooms')
+            .room-info__plan
+              =image_tag 'smart-home/f-1-r-1-big.png', alt: '#'
+            .room-info__list
+              %ul
+                %li.big>
+                  %span.plan-ico.full
+                  42
+                  %span= t('m_html')
+                %li>
+                  %span.plan-ico.kitchen
+                  22
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('studio')
+                %li>
+                  %span.plan-ico.bath
+                  5
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bathroom')
+                %li>
+                  %span.plan-ico.bedroom
+                  14
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bedroom')
+
+        .room-info.f-1-r-2__slide{data:{class: 'f-1-r-2'}}
+          .info-container
+            .smart-home__heading
+              %h3
+                1
+                = t('room')
+            .room-info__plan
+              =image_tag 'smart-home/f-1-r-2-big.png', alt: '#'
+            .room-info__list
+              %ul
+                %li.big>
+                  %span.plan-ico.full
+                  42
+                  %span= t('m_html')
+                %li>
+                  %span.plan-ico.kitchen
+                  34
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('studio')
+                %li>
+                  %span.plan-ico.bath
+                  4.5
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bathroom')
+
+        .room-info.f-1-r-3__slide.first-active-slide.visible{data:{class: 'f-1-r-3'}}
+          .info-container
+            .smart-home__heading
+              %h3
+                2
+                = t('rooms')
+            .room-info__plan
+              =image_tag 'smart-home/f-1-r-3-big.png', alt: '#'
+            .room-info__list
+              %ul
+                %li.big>
+                  %span.plan-ico.full
+                  62
+                  %span= t('m_html')
+                %li>
+                  %span.plan-ico.kitchen
+                  14.5
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('kitchen')
+                %li>
+                  %span.plan-ico.bath
+                  4
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bath')
+                %li>
+                  %span.plan-ico.bedroom
+                  14.6
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bedroom')
+                %li>
+                  %span.plan-ico.wc
+                  2.3
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('wc')
+                %li>
+                  %span.plan-ico.living-room
+                  15
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('living_room')
+            -# .tour-link-container
+            -#   %a.tour-link.room-tour-link{href: '#'} 3d tour
+
+        .room-info.f-1-r-4__slide{data:{class: 'f-1-r-4'}}
+          .info-container
+            .smart-home__heading
+              %h3
+                1
+                = t('room')
+            .room-info__plan
+              =image_tag 'smart-home/f-1-r-4-big.png', alt: '#'
+            .room-info__list
+              %ul
+                %li.big>
+                  %span.plan-ico.full
+                  48
+                  %span= t('m_html')
+                %li>
+                  %span.plan-ico.kitchen
+                  35
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('studio')
+                %li>
+                  %span.plan-ico.bath
+                  5
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bathroom')
+
+        .room-info.f-1-r-5__slide{data:{class: 'f-1-r-5'}}
+          .info-container
+            .smart-home__heading
+              %h3
+                1
+                = t('room')
+            .room-info__plan
+              =image_tag 'smart-home/f-1-r-5-big.png', alt: '#'
+            .room-info__list
+              %ul
+                %li.big>
+                  %span.plan-ico.full
+                  40
+                  %span= t('m_html')
+                %li>
+                  %span.plan-ico.kitchen
+                  28.5
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('studio')
+                %li>
+                  %span.plan-ico.bath
+                  5
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bathroom')
+
+        .room-info.f-1-r-6__slide{data:{class: 'f-1-r-6'}}
+          .info-container
+            .smart-home__heading
+              %h3
+                1
+                = t('room')
+            .room-info__plan
+              =image_tag 'smart-home/f-1-r-6-big.png', alt: '#'
+            .room-info__list
+              %ul
+                %li.big>
+                  %span.plan-ico.full
+                  42
+                  %span= t('m_html')
+                %li>
+                  %span.plan-ico.kitchen
+                  35
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('studio')
+                %li>
+                  %span.plan-ico.bath
+                  4.5
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bathroom')
+
+        .room-info.f-1-r-7__slide{data:{class: 'f-1-r-7'}}
+          .info-container
+            .smart-home__heading
+              %h3
+                1
+                = t('room')
+            .room-info__plan
+              =image_tag 'smart-home/f-1-r-7-big.png', alt: '#'
+            .room-info__list
+              %ul
+                %li.big>
+                  %span.plan-ico.full
+                  42
+                  %span= t('m_html')
+                %li>
+                  %span.plan-ico.kitchen
+                  35
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('studio')
+                %li>
+                  %span.plan-ico.bath
+                  4.5
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bathroom')

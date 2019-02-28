@@ -1,0 +1,43 @@
+- content_for :body_class, "news-open-page"
+- content_for :title, "#{@news.title} - t('title.news_archive')"
+- content_for :desc, t('desc.news_archive')
+- content_for :keywords, t('keywords.news_archive')
+- breadcrumb :news_item, @news
+
+= render partial: 'partials/header'
+
+.news-open__container
+  .section-content
+    .flex-block.half-width.first
+      .news-open__photos>
+        - if @news.news_photos.present?
+          .swiper-container.gallery-top.js-gallery-top
+            .swiper-wrapper
+              - @news.news_photos.each do |news_photo|
+                .swiper-slide
+                  =image_tag news_photo.photo.url, alt: '#'
+            .swiper-button-next.swiper-button-white
+            .swiper-button-prev.swiper-button-white
+          .swiper-container.gallery-thumbs.js-gallery-thumbs
+            .swiper-wrapper
+              - @news.news_photos.each do |news_photo|
+                .swiper-slide
+                  =image_tag news_photo.photo.thumb.url, alt: '#'
+
+    .flex-block.half-width.second
+      %p.date= @news.date.strftime('%d.%m.%Y')
+      .news-open__text>
+        .text-container
+          %h6= @news.title
+          %p= @news.preview_text
+          = raw @news.body
+        .latest-news__link
+          %a.js-latest-news{href: '#'}= t('.latest_news')
+
+      .latest-news__container
+        .latest-news__list
+          %ul
+            = render partial: 'partials/news_item', collection: @latest_news
+
+
+= render partial: 'partials/footer'

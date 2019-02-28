@@ -1,0 +1,2 @@
+module ConstructionConditionsHelper
+end

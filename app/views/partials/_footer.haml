@@ -1,0 +1,42 @@
+%footer.main-footer.clearfix
+  %p.copyright= t('copyright_text')
+  .pull-left
+    %ul.footer-menu
+      %li
+        =link_to t('.project'), root_path(anchor: 'project')
+      %li
+        =link_to t('.advantages'), root_path(anchor: 'advantages')
+      %li
+        =link_to t('.location'), root_path(anchor: 'location')
+      %li
+        =link_to t('.infrastructure'), root_path(anchor: 'infrastructure')
+      %li
+        =link_to t('.planning'), root_path(anchor: 'planning')
+      %li
+        =link_to t('.smart_home'), root_path(anchor: 'smart_home')
+      %li
+        =link_to t('.news'), root_path(anchor: 'news')
+      %li
+        =link_to t('.status'), root_path(anchor: 'status')
+      %li
+        =link_to t('.gallery'), root_path(anchor: 'gallery')
+      %li
+        =link_to t('.contacts'), root_path(anchor: 'contacts')
+
+  .footer-contacts__container
+    %ul.footer-contacts
+      %li.phone
+        %label= t('.phone_row.label')
+        %p= t('.phone_row.text')
+      %li.email
+        %label= t('.mail_row.label')
+        %p= t('.mail_row.text_html')
+      %li.skype
+        %label= t('.skype_row.label_html')
+        %p= t('.skype_row.text_html')
+
+  .pull-right
+    .socials-list
+      = t('facebook_link_html')
+      = t('twitter__link_html')
+    %a.webmil{href: 'http://webmil.eu/', title: 'webmil.eu', target: '_blank'}

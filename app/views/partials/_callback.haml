@@ -1,0 +1,22 @@
+%a#cta{href: '#'}
+  %div
+    = image_tag('cell-icon.png')
+
+#modal
+  %div
+    %button.close &#10799;
+    .icon
+      %div
+        = image_tag('cell-icon.png')
+    %h5= t('.get_call_modal')
+    %p
+      %i= t('.form_hint_modal')
+    .contacts-form__wrapper
+      %p.contacts-form__success= t('.contacts_section.form_success')
+      = simple_form_for(@request, url: :request, html: {class: 'js-contacts-form contacts-form clearfix', novalidate: true}) do |f|
+        .input-container
+          %span.hint +38
+          = f.input_field :phone, class: 'phone-input', placeholder: '000 00 00 000', type: 'tel'
+          %i.form-error.js-form-error
+        %div
+          %button#addToCartButton.button{onClick: "ga('send', 'event', { eventCategory: 'button', eventAction: 'click'}); fbq('track', 'Lead')"}= t('order_btn_modal')

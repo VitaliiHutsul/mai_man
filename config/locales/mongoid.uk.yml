@@ -1,0 +1,86 @@
+uk:
+  mongoid:
+    models:
+      manager: Менеджери
+      user: Адміністратори
+      news: Новини
+      translation: Переклади
+      update: Оновлення
+      request: Зворотній дзвінок
+      infrastructure_photo: Слайд Інфраструктура
+      location_photo: Слайд Локація
+      main_slider: Головний слайдер
+      gallery: Галерея
+      construction_condition: Стан будівництва
+      video: Відеогалерея
+      download: Завантаження
+
+    attributes:
+      infrastructure_photo:
+        name: Заголовок
+        photo: Зображення
+
+      location_photo:
+        photo: Зображення
+
+      request:
+        created_at: Створено
+        phone: Телефон
+
+      construction_condition:
+        created_at: Створено
+        updated_at: Остання Зміна
+        date: Дата
+        title: Заголовок
+        body: Текст новини
+        preview_image: Маленьке зображення
+
+      video:
+        youtube_link: 'Посилання на youtube'
+        title: 'Назва'
+        weight: 'Пріорітет'
+
+      gallery:
+        gallery_photos: Галерея
+        photo: Фото
+        gallery_photo: Фото галереї
+
+      news:
+        created_at: Створено
+        updated_at: Остання Зміна
+        date: Дата
+        title: Заголовок
+        preview_text: Короткий опис
+        body: Текст новини
+        small_image: Маленьке зображення
+
+      update:
+        created_at: Створено
+        updated_at: Остання Зміна
+        date: Дата
+        title: Заголовок
+        text: Текст
+
+      main_slider:
+        first_photo: Перше зображення
+        second_photo: Друге зображення
+
+      manager:
+        email: Емейл
+        phone: Номер телефону
+        send_sms: Надсилати СМС
+
+      download:
+        title: Заголовок
+        text: Текст
+        start_date: Дата запуску
+        ios_link: Посилання на App Store
+        show_ios_button: Показувати кнопку завантаження додатку App store
+        android_link: Посилання на Google Play Маркет
+        show_android_button: Показувати кнопку завантаження додатку Google Play Маркет
+        downloads_photos: Фото для слайдера
+        downloads_photo: Фото
+
+      downloads_photo:
+        weight: Вага
+        image: Фото

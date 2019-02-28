@@ -1,0 +1,169 @@
+.section-content.floor-wrapper
+
+  .flex-block.half-width.first.padding-left>
+    .text-block
+      .smart-home__heading
+        %h3= t('exclusive_planning')
+      .floor.exclusive-planning-floor
+        %h4= t('.houses')
+        .floor-plan__container
+          .room-img.f-3-r-1.first-active.hidden
+          .room-img.f-3-r-2
+          .room-img.f-3-r-3
+          = render 'partials/exclusive-planning-svg'
+
+  .flex-block.half-width.padding-left.second>
+    .text-block
+      .arrows-container
+        %a.arrow.prev.js-prev-planning{href: '#'}>
+        %a.arrow.next.js-next-planning{href: '#'}>
+      .rooms-info
+        .room-info.f-3-r-1__slide.first-active-slide.visible{data:{class: 'f-3-r-1'}}
+          .info-container
+            .smart-home__heading
+              %h3
+                3
+                = t('rooms')
+            .room-info__plan
+              =image_tag 'exclusive_planning/f-3-r-1-big.png', alt: '#'
+            .room-info__list
+              %ul
+                %li.big>
+                  %span.plan-ico.full
+                  82
+                  %span= t('m_html')
+                %li>
+                  %span.plan-ico.kitchen
+                  12.4
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('kitchen')
+                %li>
+                  %span.plan-ico.bath
+                  4.7
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bath')
+                %li>
+                  %span.plan-ico.bedroom
+                  17.7
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bedroom')
+                %li>
+                  %span.plan-ico.wc
+                  1.3
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('wc')
+                %li>
+                  %span.plan-ico.living-room
+                  18.5
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('living_room')
+                %li>
+                  %span.plan-ico.bedroom
+                  15
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bedroom')
+
+        .room-info.f-3-r-2__slide{data:{class: 'f-3-r-2'}}
+          .info-container
+            .smart-home__heading
+              %h3
+                2
+                = t('rooms')
+            .room-info__plan
+              =image_tag 'exclusive_planning/f-3-r-2-big.png', alt: '#'
+            .room-info__list
+              %ul
+                %li.big>
+                  %span.plan-ico.full
+                  68
+                  %span= t('m_html')
+                %li>
+                  %span.plan-ico.kitchen
+                  15
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('kitchen')
+                %li>
+                  %span.plan-ico.bath
+                  3.7
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bath')
+                %li>
+                  %span.plan-ico.bedroom
+                  21
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bedroom')
+                %li>
+                  %span.plan-ico.wc
+                  2.6
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('wc')
+                %li>
+                  %span.plan-ico.living-room
+                  21
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('living_room')
+
+        .room-info.f-3-r-3__slide{data:{class: 'f-3-r-3'}}
+          .info-container
+            .smart-home__heading
+              %h3
+                3
+                = t('rooms')
+            .room-info__plan
+              =image_tag 'exclusive_planning/f-3-r-3-big.png', alt: '#'
+            .room-info__list
+              %ul
+                %li.big>
+                  %span.plan-ico.full
+                  87
+                  %span= t('m_html')
+                %li>
+                  %span.plan-ico.kitchen
+                  13.6
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('kitchen')
+                %li>
+                  %span.plan-ico.bedroom
+                  16.4
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bedroom')
+                %li>
+                  %span.plan-ico.living-room
+                  18.5
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('living_room')
+                %li>
+                  %span.plan-ico.bedroom
+                  14.9
+                  %span= t('m_html')
+                  %i>
+                    \-
+                    = t('bedroom')

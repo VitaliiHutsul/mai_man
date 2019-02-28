@@ -1,0 +1,175 @@
+.main-header {
+  top: 32px;
+  left: 0;
+  position: fixed;
+  z-index: 100;
+  .darken-bg {
+    content: '';
+    position: absolute;
+    top: -32px;
+    left: 0;
+    width: 130%;
+    height: 120%;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+  }
+}
+
+.logo-container {
+  position: relative;
+  margin: 0 0 30px 10px;
+  width: 160px;
+  height: 42px;
+}
+
+.logo {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  display: block;
+  width: 150px;
+  height: 42px;
+  background: image-url('logo.png') no-repeat;
+  background-size: 100% 100%;
+  transition: opacity .5s, top .5s;
+  &.hidden {
+    opacity: 0;
+    top: -100% ;
+  }
+  &.visible {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.main-menu {
+  li {
+    position: relative;
+    padding-left: 50px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      display: block;
+      width: 25px;
+      height: 25px;
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAABQVBMVEX7/P/////7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P/7/P96R8h6AAAAanRSTlMAAAMEBQcICQsMDRojJCUmKiwtLjEzNTY3ODk6PT4/QENERUhJTE1OT1FTYWpvd3t+f4aLjI2Ol5ien6ChoqSlp6iprK+wsbK3uMTHzNHT19ne3+Hi4+Tl5ujq6+zt7u/w8fT29/j5+vz+4eiz4AAAASZJREFUeAFt0udWwkAQBeARkNgFCyCIFFHsRVBAQyISezd2CSYqJuz7P4CZzeJhde/P+7HDnDmB0owE3enpBFrtakoSikHIt5zxCeSVuLEOcv8lpdhoDS37V6AvpnyhNQ9TvLgJRFUTrVVPBjnBRCtPaG0lKf3KMLNY+Q7N2Uv7mVwUwswmC7doH/s5Tz7JzfYos7ENHc3QZlFw/n2xM3Nojb5rHmX98Eww+jywhM9oYazQN9bJ0oDXDy6fO25hni5IYBJLWwQvI6uX+Pv34zz+z0M9z/rQ5hXdrTbn7ZYIsr12rrG3K+kAd4OJsk773WmJu1tENumcary3+279cZXe+k2N8LfO1BzsH+UpAF4atC8lAATyUoyKvhDb2BoHEMl6yAdC+QHvakzBRYPJ+QAAAABJRU5ErkJggg==') no-repeat;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    &.active {
+      &::before { opacity: 1; }
+      a { opacity: .8; }
+    }
+  }
+  a {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 30px;
+    opacity: 1;
+    transition: opacity .3s;
+    &:hover { opacity: .8; }
+  }
+}
+
+.lang-menu {
+  position: relative;
+  margin-top: 30px;
+  padding-left: 40px;
+  li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    &.active { display: none; }
+  }
+}
+
+
+.static-header {
+  padding: 30px 0 20px 0;
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .logo-container {
+    width: auto;
+    height: auto;
+    margin: 0 65px 0 15px;
+  }
+  .logo {
+    position: static;
+    opacity: 1;
+    top: auto;
+    left: auto;
+  }
+}
+
+.breadcrumbs {
+  a {
+    margin-right: 55px;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+      opacity: 1;
+    }
+  }
+  .current {
+    display: inline-block;
+    vertical-align: top;
+    color: #8c9299;
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.burger-btn {
+  display: none;
+  width: 44px;
+  height: 32px;
+  position: fixed;
+  left: 20px;
+  top: 40px;
+  transform: rotate(0deg);
+  transition: .3s ease-in-out;
+  cursor: pointer;
+  z-index: 10000000;
+  span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .3s ease-in-out;
+    &:nth-child(1) { top: 0; }
+    &:nth-child(2),
+    &:nth-child(3) { top: 15px; }
+    &:nth-child(4) { top: 30px; }
+  }
+  &.open {
+    left: 240px;
+    span {
+      &:nth-child(1) {
+        top: 15px;
+        width: 0%;
+        left: 50%;
+      }
+      &:nth-child(2) { transform: rotate(45deg); }
+      &:nth-child(3) { transform: rotate(-45deg); }
+      &:nth-child(4) {
+        top: 15px;
+        width: 0%;
+        left: 50%;
+      }
+    }
+  }
+}
+
+.main-logo__mobile { display: none; }

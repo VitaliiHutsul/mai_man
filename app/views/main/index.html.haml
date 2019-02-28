@@ -1,0 +1,286 @@
+- content_for :body_class, "main-page"
+- content_for :title, t('title.main')
+- content_for :desc, t('desc.main')
+- content_for :keywords, t('keywords.main')
+
+= render 'partials/loader'
+= render 'partials/menu'
+
+#fullpage
+  .section.main-section
+    .container
+      .section-text
+        %h1.main-logo Manhattan
+        .h1= t('.main_section.main_heading')
+    .swiper-container.js-main-slider.main-slider
+      %a.construction-completed__container{href: '#status'}
+        #doughnutChart.completed-chart
+        %p= t('.main_section.construction_completed_html')
+
+      .main-slider__tour
+        %a.tour-link{href: tour_index_path}= t('3d_tour')
+      .swiper-wrapper
+        - @main_slides.each do |slide|
+          .swiper-slide
+            .flex-block.half-width.first>
+              .slide-image{style: "background-image: url(#{slide.first_photo.url});"}
+            .flex-block.half-width.second>
+              .slide-image.slide-top{style: "background-image: url(#{slide.second_photo.url});"}
+      .main-swiper-pagination.swiper-pagination
+
+  .section.advantages-section.js-advantages-section
+    .section-content
+      .flex-block.half-width.first
+        .tooltips-container
+          .wrap
+            = image_tag('advantages-slide-img@desktop1.png')
+            .inner
+              .tooltip.building.lg{title: t('.advantages_section.tooltip_1_html')}
+              .tooltip.medal.md{title: t('.advantages_section.tooltip_2_html')}
+              .tooltip.shield.lg{title: t('.advantages_section.tooltip_3_html')}
+              .tooltip.flat.lg{title: t('.advantages_section.tooltip_4_html')}
+              .tooltip.car.sm{title: t('.advantages_section.tooltip_5_html')}
+              .tooltip.cam.md{title: t('.advantages_section.tooltip_6_html')}
+              .tooltip.room.sm{title: t('.advantages_section.tooltip_7_html')}
+      .flex-block.half-width.second.padding-left
+        .text-block
+          %ul.advantages-list
+            %li.advantage-1
+              %h4= t('.advantages_section.line_1.heading')
+              %p= t('.advantages_section.line_1.text')
+            %li.advantage-2
+              %h4= t('.advantages_section.line_2.heading')
+              %p= t('.advantages_section.line_2.text_html')
+            %li.advantage-3
+              %h4= t('.advantages_section.line_3.heading')
+              %p= t('.advantages_section.line_3.text')
+            %li.advantage-4
+              %h4= t('.advantages_section.line_4.heading')
+              %p= t('.advantages_section.line_4.text')
+            %li.advantage-5
+              %h4= t('.advantages_section.line_5.heading')
+              %p= t('.advantages_section.line_5.text')
+
+
+  .section.location-section
+    .section-content
+      .flex-block.half-width.first>
+        - if @location_photo.present?
+          .slide-image{style: "background-image: url(#{@location_photo.photo.url});"}
+      .flex-block.half-width.second.padding-left>
+        -# .slide-image{style: "background-image: url(#{image_path "location-section-bg-second.jpg"});"}
+        .text-block
+          .location-text.first
+            %h4= t('.location_section.location')
+            %p= t('.location_section.location_text')
+            %ul
+              %li.first= t('.location_section.location_list.line_1_html')
+              %li.second= t('.location_section.location_list.line_2_html')
+              %li.third= t('.location_section.location_list.line_3_html')
+
+          .location-text.second
+            %h4= t('.location_section.cosiness')
+            %p= t('.location_section.cosiness_text')
+          .tour-link-container
+            %a.tour-link{href: tour_index_path}= t('3d_tour')
+
+  .section.planning-section.two-col-bg
+    .bg-container
+      .slide-image.first{style: "background-image: url(#{image_path "smart-home-first-bg.jpg"});"}
+      .slide-image.second{style: "background-image: url(#{image_path "news-section-bg-second.png"});"}
+    .planning-slider.swiper-container.js-planning-slider
+      .swiper-wrapper
+        .stn-planning.swiper-slide{data:{name: t('standart_planning')}}
+          = render 'partials/standart-planning'
+      .planing-swiper-navigation.swiper-pagination
+
+  .section.exclusive-planning-section.two-col-bg
+    .bg-container
+      .slide-image.first{style: "background-image: url(#{image_path "smart-home-first-bg.jpg"});"}
+      .slide-image.second{style: "background-image: url(#{image_path "news-section-bg-second.png"});"}
+    .exc-planning
+      = render 'partials/exclusive-planning'
+
+  .section.smart-home-section.two-col-bg
+    .bg-container
+      .slide-image.first{style: "background-image: url(#{image_path "smart-home-first-bg.jpg"});"}
+      .slide-image.second{style: "background-image: url(#{image_path "news-section-bg-second.png"});"}
+    = render 'partials/smart-home'
+
+  .section.infrastructure-section
+    .section-content
+      .flex-block.half-width.first.padding-left>
+        .slide-image{style: "background-image: url(#{image_path "infrastructure-section-bg-first.png"});"}
+        .text-block
+          %ul.infrastructure-list
+
+            %li.js-infrastructure-item.infrastructure-item.infrastructure-item__recreation.active{data:{section: '.infrastructure-recreation'}}
+              %a.active{href: '#'}
+                %span.active-line
+                %h5= t('.infrastructure_section.line_3.heading_html')
+                %p= t('.infrastructure_section.line_3.text')
+
+            %li.js-infrastructure-item.infrastructure-item.infrastructure-item__commerce{data:{section: '.infrastructure-commerce'}}
+              %a{href: '#'}
+                %span.active-line
+                %h5= t('.infrastructure_section.line_2.heading_html')
+                %p= t('.infrastructure_section.line_2.text')
+
+            %li.js-infrastructure-item.infrastructure-item.infrastructure-item__houses{data:{section: '.infrastructure-houses'}}
+              %a{href: '#'}
+                %span.active-line
+                %h5= t('.infrastructure_section.line_1.heading_html')
+                %p= t('.infrastructure_section.line_1.text')
+
+      .flex-block.half-width.second>
+        - if @infrastructure_photos.present?
+          .slide-image.infrastructure-recreation.active{style: "background-image: url(#{@infrastructure_photos.third.photo.url});"}
+          .slide-image.infrastructure-commerce{style: "background-image: url(#{@infrastructure_photos.second.photo.url});"}
+          .slide-image.infrastructure-houses{style: "background-image: url(#{@infrastructure_photos.first.photo.url});"}
+
+  .section.news-section
+    .section-content
+      .flex-block.half-width.first.padding-left.updates-block__index>
+        .slide-image{style: "background-image: url(#{image_path "news-section-bg-first.png"});"}
+        .text-block
+          %h2= t('.news_section.updates')
+          %ul.updates-list
+            = render partial: 'partials/updates_item', collection: @updates
+          - if @show_updates_archive
+            .archive-link__container
+              = link_to t('show_more'), updates_archive_path, class: 'archive-link'
+
+      .flex-block.half-width.second.news-block__index>
+        .slide-image{style: "background-image: url(#{image_path "news-section-bg-second.png"});"}
+        .text-block
+          %h2= t('.news_section.news')
+          %ul.news-list
+            = render partial: 'partials/news_item', collection: @news
+          - if @show_news_archive
+            .archive-link__container
+              = link_to t('show_more'), news_archive_path, class: 'archive-link'
+
+  .section.status-section.two-col-bg
+    .bg-container
+      .slide-image.first{style: "background-image: url(#{image_path "status-section-bg-first.png"});"}
+      .slide-image.second{style: "background-image: url(#{image_path "status-section-bg-second.png"});"}
+    .section-content
+      .images
+        %h2= t('.status_section.status')
+        .month.clearfix
+          - @construction_conditions.each do |construction_condition|
+            =link_to construction_condition_path(construction_condition) do
+              =image_tag construction_condition.preview_image
+              .month-name
+                %p= raw l(construction_condition.date, format: "%b<span>%Y</span>")
+              .hover
+                %p= raw construction_condition.date.strftime("%d<span class='devider'>/</span>%m")
+
+        - if @show_onstruction_conditions_link
+          .more
+            =link_to construction_conditions_path, id: 'btn-more' do
+              = t('.status_section.more')
+              = image_tag('icon-arrow-down.svg')
+
+  .section.gallery-section.two-col-bg
+    .bg-container
+      .slide-image.first{style: "background-image: url(#{image_path "status-section-bg-first.png"});"}
+      .slide-image.second{style: "background-image: url(#{image_path "status-section-bg-second.png"});"}
+    .section-content
+      .flex-block.first.padding-left
+        .images
+          %h2= t('.gallery_section.gallery')
+          .gallery
+            - @gallery_photos.each_with_index do |gallery_photo, index|
+              = link_to gallery_photo.photo.url, data:{fancybox: 'photo-gallery'}, class: "fancybox #{gallery_item_class(index)}" do
+                = image_tag gallery_photo.photo.thumb.url, alt: '#'
+                .hover
+          - if @show_gallery_link
+            .more
+              =link_to galleries_path, id: 'btn-more' do
+                = t('.gallery_section.more')
+                = image_tag('icon-arrow-down.svg')
+
+  .section.video-section.two-col-bg
+    .bg-container
+      .slide-image.first{style: "background-image: url(#{image_path "status-section-bg-first.png"});"}
+      .slide-image.second{style: "background-image: url(#{image_path "status-section-bg-second.png"});"}
+    .section-content
+      .images
+        %h2= t('.video_section.video')
+        - if @videos.present?
+          .month.clearfix
+            - @videos.each_slice(2) do |video_1, video_2|
+              %div.clearfix
+                - if video_1.present?
+                  = link_to video_1.youtube_link, data:{fancybox: ""} do
+                    .video-thumb
+                      = image_tag "https://img.youtube.com/vi/#{video_1.youtube_video_id}/0.jpg"
+                    - if video_1.title.present?
+                      %h6= video_1.title
+                - if video_2.present?
+                  = link_to video_2.youtube_link, data:{fancybox: ""} do
+                    .video-thumb
+                      = image_tag "https://img.youtube.com/vi/#{video_2.youtube_video_id}/0.jpg"
+                    - if video_2.title.present?
+                      %h6= video_2.title
+        - if @show_video_archive
+          .more
+            =link_to videos_path, id: 'btn-more' do
+              = t('.status_section.more')
+              = image_tag('icon-arrow-down.svg')
+
+  .section.contacts-section
+    .section-content
+      .flex-block.half-width.first.padding-left
+        .slide-image{style: "background-image: url(#{image_path "contacts-section-bg-first.png"});"}
+        .text-block
+          .contacts-row.big.phone
+            %label= t('.contacts_section.phone_row.label')
+            %p= t('.contacts_section.phone_row.text_html')
+          .contacts-row.email
+            %label= t('.contacts_section.mail_row.label')
+            %p= t('.contacts_section.mail_row.text_html')
+          .contacts-row.skype
+            %label= t('.contacts_section.skype_row.label_html')
+            %p= t('.contacts_section.skype_row.text_html')
+          .contacts-row.address
+            %label= t('.contacts_section.address_row.label_html')
+            %p= t('.contacts_section.address_row.text_html')
+          .socials-list
+            = t('facebook_link_html')
+            = t('twitter__link_html')
+
+      .flex-block.half-width.second.contacts-form__container
+        .slide-image{style: "background-image: url(#{image_path "contacts-section-bg-second.jpg"});"}
+        .text-block
+          %a.webmil{href: 'http://webmil.eu/', title: 'webmil.eu', target: '_blank'}
+          %h5= t('.contacts_section.get_call')
+          %p
+            %i= t('.contacts_section.form_hint')
+          .contacts-form__wrapper
+            %p.contacts-form__success= t('.contacts_section.form_success')
+            = simple_form_for(@request, url: :request, html: {id: 'contacts-form', class: 'js-contacts-form contacts-form clearfix', novalidate: true}) do |f|
+              .input-container.pull-left
+                %span.hint +38
+                = f.input_field :phone, class: 'phone-input', placeholder: '000 00 00 000', type: 'tel'
+                %i.form-error.js-form-error
+              %button#addToCartButton.button.contacts-callback-btn.pull-right{onClick: "ga('send', 'event', { eventCategory: 'button', eventAction: 'click'}); fbq('track', 'Lead')"}= t('order_btn')
+          .messenger-button__container.clearfix
+            %h6.pull-left= t('.contacts_section.text_with_facebook_messenger')
+            %a.pull-right.button.messenger-button{href: 'https://m.me/mymanhattancomua', target: '_blank'}>
+              %svg{height: "22", version: "1.1", viewbox: "0 0 22 22", width: "22", xmlns: "http://www.w3.org/2000/svg", "xmlns:xlink": "http://www.w3.org/1999/xlink"}>
+                %title messenger
+                %defs
+                  %path#path-1{:d => "M22 0v22H0V0z"}
+                %g{fill: "none", "fill-rule": "evenodd", stroke: "none", "stroke-width": "1"}
+                  %g{transform: "translate(-535 -3553)"}
+                    %g#Footer{transform: "translate(0 3215)"}
+                      %g#Button{transform: "translate(504 323)"}
+                        %g#messenger{transform: "translate(31 15)"}
+                          %mask#mask-2{fill: "#fff"}
+                            %use{"xlink:href": "#path-1"}
+                          %path#Fill-1{d: "M12.093 13.716l-2.801-2.987-5.466 2.987L9.84 7.333l2.869 2.988 5.397-2.988-6.012 6.383zM11 0C4.925 0 0 4.56 0 10.185c0 3.205 1.6 6.065 4.1 7.931V22l3.745-2.055c1 .276 2.058.425 3.155.425 6.075 0 11-4.56 11-10.185C22 4.56 17.075 0 11 0z", fill: "#FFF", mask: "url(#mask-2)"}
+              %span>
+                = t('.contacts_section.facebook_messenger_button_text')
+          %p.copyright= t('copyright_text')

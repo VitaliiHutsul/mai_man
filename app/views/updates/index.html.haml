@@ -1,0 +1,15 @@
+- content_for :body_class, "updates-archive-page"
+- content_for :title, t('title.updates_archive')
+- content_for :desc, t('desc.updates_archive')
+- content_for :keywords, t('keywords.updates_archive')
+- breadcrumb :updates, @updates
+
+= render 'partials/header'
+
+.updates-page__container
+  .container
+    %ul.updates-list
+      %li.grid-sizer
+      = render partial: 'partials/updates_item', collection: @updates
+
+= render 'partials/footer'

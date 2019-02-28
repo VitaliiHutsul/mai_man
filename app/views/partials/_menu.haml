@@ -1,0 +1,41 @@
+%a.main-logo__mobile{href: '#project'}
+
+%a.burger-btn.js-burger{href: '#'}
+  %span
+  %span
+  %span
+  %span
+
+%header.main-header.js-main-header
+  .mobile-scroll
+    %span.darken-bg
+    .logo-container
+      %a.logo.hidden.js-logo{title: 'Manhattan', href: '#project'}
+    %nav
+      %ul.main-menu
+        %li{data:{menuanchor: 'project'}, class: 'active'}
+          %a{href: '#project'}= t('.project')
+        %li{data:{menuanchor: 'advantages'}}
+          %a{href: '#advantages'}= t('.advantages')
+        %li{data:{menuanchor: 'location'}}
+          %a{href: '#location'}= t('.location')
+        %li{data:{menuanchor: 'planning'}}
+          %a{href: '#planning'}= t('.planning')
+        %li{data:{menuanchor: 'exclusive'}}
+          %a{href: '#exclusive'}= t('.exclusive_planning')
+        %li{data:{menuanchor: 'smart_home'}}
+          %a{href: '#smart_home'}= t('.smart_home')
+        %li{data:{menuanchor: 'infrastructure'}}
+          %a{href: '#infrastructure'}= t('.infrastructure')
+        %li{data:{menuanchor: 'news'}}
+          %a{href: '#news'}= t('.news')
+        %li{data:{menuanchor: 'status'}}
+          %a{href: '#status'}= t('.status')
+        %li{data:{menuanchor: 'gallery'}}
+          %a{href: '#gallery'}= t('.gallery')
+        %li{data:{menuanchor: 'video'}}
+          %a{href: '#video'}= t('.video')
+        %li{data:{menuanchor: 'contacts'}}
+          %a{href: '#contacts'}= t('.contacts')
+
+    = lang_switcher

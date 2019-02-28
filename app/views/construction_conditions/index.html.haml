@@ -1,0 +1,20 @@
+- content_for :body_class, "construction-conditions-page"
+- content_for :title, t('title.construction_condition')
+- content_for :desc, t('desc.construction_condition')
+- content_for :keywords, t('keywords.construction_condition')
+- breadcrumb :construction_conditions, @construction_conditions
+
+= render partial: 'partials/header'
+
+.status-section
+  .images
+    .month.clearfix
+      - @construction_conditions.each do |construction_condition|
+        =link_to construction_condition_path(construction_condition) do
+          =image_tag construction_condition.preview_image
+          .month-name
+            %p= raw l(construction_condition.date, format: "%b<span>%Y</span>")
+          .hover
+            %p= raw construction_condition.date.strftime("%d<span class='devider'>/</span>%m")
+
+= render 'partials/footer'

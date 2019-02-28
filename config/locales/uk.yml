@@ -1,0 +1,230 @@
+uk:
+  uk: Укр
+  ru: Рус
+  en: Eng
+
+  title:
+    main: Головна
+    news_archive: Архів новин
+    updates_archive: Архів оновлень
+    gallery: Галерея
+    construction_condition: Стан будівництва
+    videos: Відеогалерея
+    downloads: Завантаження
+
+  keywords:
+    main: Головна
+    news_archive: Архів новин
+    updates_archive: Архів оновлень
+    gallery: Галерея
+    construction_condition: Стан будівництва
+    videos: Відеогалерея
+
+  desc:
+    main: Головна
+    news_archive: Архів новин
+    updates_archive: Архів оновлень
+    gallery: Галерея
+    construction_condition: Стан будівництва
+    videos: Відеогалерея
+
+  3d_tour: 3d tour
+  show_more: показати більше
+  facebook_link_html: "<a class='facebook' href='#'></a>"
+  twitter__link_html: "<a class='twitter' href='#'></a>"
+  order_btn: Замовити
+  order_btn_modal: Замовити
+  copyright_text: "© 2017 MAHATTAN. All Rights Reserved"
+  main_page: Головна
+  standart_planning: Типове планування
+  smart_home: Smart Home
+  exclusive_planning: Клас Еліт
+  room: кімната
+  rooms: кімнати
+  kitchen: кухня
+  bath: ванна
+  bathroom: санвузол
+  studio: студія
+  bedroom: спальня
+  living_room: вітальня
+  wc: туалет
+  m_html: "м<sup>2</sup>"
+
+  partials:
+    callback:
+      get_call_modal: 'Замовити дзвінок'
+      form_hint_modal: 'вкажіть номер телефону і наша команда Вам зателефонує'
+    exclusive-planning:
+      houses: "Будинок № 4"
+    standart-planning:
+      houses: "Будинки № 1, 3, 5"
+    smart-home:
+      ico_1: оптимізовані витрати
+      ico_2: smart-планування
+      ico_3: функціональність
+      smart_home_tooltip_1_html: "Оптимальний метраж та енергоефективність"
+      smart_home_tooltip_2_html: "новітні концепції організації життєвого простору"
+      smart_home_tooltip_3_html: "Раціональне використання кожного квадратного метру"
+      houses: "Будинки № 2, 6"
+
+    menu:
+      project: Проект
+      advantages: Переваги
+      location: Розташування
+      infrastructure: Інфраструктура
+      planning: Планування
+      smart_home: Smart home
+      exclusive_planning: Елітні апартаменти
+      news: Новини
+      status: Стан будівництва
+      gallery: Галерея
+      video: Відеогалерея
+      contacts: Контакти
+
+    static-menu:
+      project: Manhattan
+      advantages: Переваги
+      location: Розташування
+      infrastructure: Інфраструктура
+      planning: Класичні квартири
+      smart_home: Smart-квартири
+      exclusive_planning: Елітні квартири
+      news: Новини
+      status: Стан будівництва
+      gallery: Галерея
+      video: Відеогалерея
+      contacts: Контакти
+
+    footer:
+      project: Проект
+      advantages: Переваги
+      location: Розташування
+      infrastructure: Інфраструктура
+      planning: Планування
+      smart_home: Smart home
+      news: Новини
+      status: Стан будівництва
+      gallery: Галерея
+      contacts: Контакти
+      phone_row:
+        label: відділ продаж
+        text: 098 23 14 000
+      mail_row:
+        label: e-mail
+        text_html: "<a href='mailto:manhattan@gmail.com'>manhattan@gmail.com</a>"
+      skype_row:
+        label_html: viber
+        text_html: "097 07 14 000<br />050 07 14 000"
+
+  main:
+    index:
+      video_section:
+        more: 'Більше'
+        video: 'Відеогалерея'
+
+      gallery_section:
+        more: 'Більше'
+        gallery: 'галерея'
+
+      status_section:
+        more: 'Більше'
+        status: 'Стан будівництва'
+
+      main_section:
+        main_heading: "твій стиль життя"
+        construction_completed_html: "будівництво завершено на:<span data-completed='44'>44%</span>"
+
+      advantages_section:
+        tooltip_1_html: "Тултіп 1. <b>Найсучасніша інфраструктура:</b><br /> Район спроектовано з врахування останніх тенденцій стилю loft і концепцій Eco Building та Smart City."
+        tooltip_2_html: "Тултіп 2. <b>Спортивне поле:</b><br />Наявність мультифункціонального спортивного поля, сучасний дитячий майданчик, спортивний клуб та якісна велоінфраструктура - в районі Манхетен є все для Вашого щасливого дозвілля. "
+        tooltip_3_html: "Тултіп 3. <b>Система контролю доступу:</b><br />Це житловий комплекс з впровадженою системою контролю доступу, відеоспостереженням та з цілодобовою службою охорони, яка подбає про Ваш спокій."
+        tooltip_4_html: "Тултіп 4. <b>Досконале планування:</b><br />Manhattan може похизуватись найкращими архітектурними рішеннями, сучасними енергозберігаючими технологіями та детально продуманим плануванням квартир, відповідно до стандартів Smart Home."
+        tooltip_5_html: "Тултіп 5. <b>Заправки для електромобілів:</b><br />Опис переваги"
+        tooltip_6_html: "Тултіп 6. <b>Система відеоспостереження:</b><br />Це житловий комплекс з впровадженою системою контролю доступу, відеоспостереженням та з цілодобовою службою охорони, яка подбає про Ваш спокій."
+        tooltip_7_html: "Тултіп 7. <b>Комфорт в деталях:</b><br />Завдяки зовнішньому багаторівневому паркінгу проблема з безліччю автомобілів, розташованих на Вашому подвір'ї, буде вирішена."
+        line_1:
+          heading: Спорт
+          text: в пішохідній доступності боксерський ринг, кросфіт, спортзал, наявність велодоріжок
+        line_2:
+          heading: Найсучасніші технології
+          text_html: "<b>2</b> заправки для електромобілів"
+        line_3:
+          heading: Безпека
+          text: системи відеоспостереження, обмежений доступ до району
+        line_4:
+          heading: Переваги житла
+          text: сучасні технології, індивідуальне планування, гнучке перепланування по запиту
+        line_5:
+          heading: Здоровий спосіб життя
+          text: Мультифункціональне спортивне поле, сучасний ігровий дитячий майданчик, велоінфраструктура
+      location_section:
+        location: Розташування
+        location_text: в пішохідній доступності боксерський ринг, кросфіт, спортзал, наявність велодоріжок в пішохідній доступності боксерський ринг, кросфіт, спортзал, наявність велодоріжок в пішохідній доступності
+        location_list:
+          line_1_html: "<span>180 м</span> пішохідна доступність рекреаційної зони (міське озеро)"
+          line_2_html: "<span>240 м</span> пішохідна доступність рекреаційної зони (річка)"
+          line_3_html: "<span>310 м</span> історичний центр міста"
+        cosiness: Затишність
+        cosiness_text: "в пішохідній доступності боксерський ринг, кросфіт, спортзал, наявність велодоріжок в пішохідній в пішохідній доступності боксерський ринг, кросфіт, спортзал, наявність велодоріжок в пішохідній в пішохідній доступності боксерський ринг, кросфіт, спортзал"
+
+      infrastructure_section:
+        line_1:
+          heading_html: "<span>47%</span> житло"
+          text: в пішохідній доступності боксерський ринг, кросфіт, спортзал, наявність велодоріжок в пішохідній доступності боксерський ринг.
+        line_2:
+          heading_html: "<span>12%</span> комерція"
+          text: в пішохідній доступності боксерський ринг, кросфіт, спортзал, наявність велодоріжок
+        line_3:
+          heading_html: "<span>12%</span> рекреація"
+          text: в пішохідній доступності боксерський ринг
+
+      news_section:
+        news: Новини
+        updates: Оновлення
+
+      contacts_section:
+        phone_row:
+          label: відділ продаж
+          text_html: "<a href='tel:+380970714000'>097 0714 000</a>"
+        mail_row:
+          label: e-mail
+          text_html: "<a href='mailto:manhattan@gmail.com'>manhattan@gmail.com</a>"
+        skype_row:
+          label_html: viber
+          text_html: "097 07 14 000<br />050 07 14 000"
+        address_row:
+          label_html: Адреса
+          text_html: "Будівельна компанія «Благо»<br />м. Івано-Франківськ,<br /> вул. Коновальця, 35"
+        get_call: Замовити дзвінок
+        get_call_modal: Замовити дзвінок
+        form_hint: вкажіть номер телефону і наша команда Вам зателефонує
+        form_hint_modal: вкажіть номер телефону і наша команда Вам зателефонує
+        form_success: Дякуємо! Найближчим часом наш менеджер зателефонує Вам!
+        text_with_facebook_messenger: Написати у Facebook
+        facebook_messenger_button_text: Messenger
+
+  news:
+    index:
+      news: "Новини (%{news_count} статті)"
+    show:
+      latest_news: Останні новини
+
+  updates:
+    index:
+      updates: "Оновлення (%{updates_count})"
+
+  galleries:
+    index:
+      gallery: "Галерея (%{gallery_photos_count} фото)"
+
+  construction_condition:
+    index:
+      construction_condition: "Стан будівництва (%{construction_condition_count})"
+
+  videos:
+    index:
+      video: "Відеозаписи (%{videos_count})"
+
+  downloads:
+    index:
+      time_left: "До запуску додатку залишилось"
