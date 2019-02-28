@@ -9,7 +9,7 @@ development:
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
-        -  - 164.132.49.9:27017
+        - 164.132.49.9:27017
       options:
         # Change the default write concern. (default = { w: 1 })
         # write:
@@ -134,9 +134,9 @@ development:
 test:
   clients:
     default:
-      database: manhattan_test
+      database: test
       hosts:
-        -  - 164.132.49.9:27017
+        - 164.132.49.9:27017
       options:
         read:
           mode: :primary
