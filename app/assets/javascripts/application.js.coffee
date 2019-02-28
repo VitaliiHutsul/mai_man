@@ -1,5 +1,5 @@
 # = require jquery
-
+#= require "modernizr/modernizr"
 #= require "fullpage.js/vendors/jquery.easings.min"
 #= require "fullpage.js/vendors/scrolloverflow.min"
 #= require "fullpage.js/jquery.fullPage"
