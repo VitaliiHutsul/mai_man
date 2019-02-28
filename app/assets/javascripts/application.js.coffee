@@ -1,31 +1,3 @@
-# = require jquery
-#= require "modernizr/modernizr"
-#= require "fullpage.js/vendors/jquery.easings.min"
-#= require "fullpage.js/vendors/scrolloverflow.min"
-#= require "fullpage.js/jquery.fullPage"
-#= require "swiper/dist/js/swiper.min"
-#= require "masonry/dist/masonry.pkgd"
-#= require "vendor/jquery.drawDoughnutChart"
-#= require "hammer.js/hammer.min"
-#= require "classie/classie"
-#= require "jquery-mask-plugin/dist/jquery.mask.min"
-#= require "fancybox/src/js/core"
-#= require "fancybox/src/js/fullscreen"
-#= require "fancybox/src/js/guestures"
-#= require "fancybox/src/js/hash"
-#= require "fancybox/src/js/media"
-#= require "fancybox/src/js/slideshow"
-#= require "fancybox/src/js/thumbs"
-#= require "vendor/fancybox"
-#= require "js-cookie/src/js.cookie"
-#= require "tooltipster/dist/js/tooltipster.bundle.min"
-#= require "jquery.countdown/dist/jquery.countdown.min"
-
-#= require "vendor/plan"
-#= require "vendor/burger-menu"
-#= require "vendor/init-fullpage"
-#= require "vendor/modal"
-
 
 # animation = ->
 #   $currently_selected = $('.infrastructure-list .active')
